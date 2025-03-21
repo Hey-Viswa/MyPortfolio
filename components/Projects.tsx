@@ -3,6 +3,7 @@
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import { Github, ExternalLink, Code, Smartphone, FilePenLine, ShoppingCart, Dumbbell } from "lucide-react";
+import Image from "next/image";
 
 
 export default function Projects() {
@@ -15,11 +16,13 @@ export default function Projects() {
       title: "Hostelgic",
       description: "A comprehensive hostel management application built with Flutter. Features real-time data management using Firebase Firestore and RESTful API integration for backend communication.",
       // Using placeholder API for images
-      imagePlaceholder: "/api/placeholder/800/600",
+      imagePlaceholder: "/images/placeholde.png",
       imageAlt: "Hostelgic app interface showing a hostel management dashboard",
       tags: ["Flutter", "Firebase", "Firestore", "REST API", "Dart"],
       githubLink: "https://github.com/yourusername/hostelgic",
       liveLink: "https://play.google.com/store/apps/details?id=com.yourusername.hostelgic",
+      width: 800, // Required width property
+      height: 600, // Required height property
       featured: true,
       category: "mobile",
       icon: <Smartphone size={20} className="text-blue-400" />,
@@ -29,12 +32,14 @@ export default function Projects() {
     {
       title: "Digital E-Commerce",
       description: "A feature-rich digital product marketplace built with MERN stack. Includes product listings, shopping cart functionality, Stripe payment integration, and user authentication.",
-      imagePlaceholder: "/api/placeholder/800/600",
+      imagePlaceholder: "/images/placeholde.png",
       imageAlt: "E-commerce website showcasing digital products for sale",
       tags: ["MongoDB", "Express.js", "React", "Node.js", "Stripe API"],
       githubLink: "https://github.com/yourusername/digital-ecommerce",
       liveLink: "https://your-digital-ecommerce.netlify.app",
       featured: true,
+      width: 800, // Required width property
+      height: 600, // Required height property
       category: "web",
       icon: <ShoppingCart size={20} className="text-emerald-400" />,
       bgColor: "emerald-900/30",
@@ -43,12 +48,14 @@ export default function Projects() {
     {
       title: "Fitness App",
       description: "Health and fitness application built with Jetpack Compose. Features workout tracking, nutrition planning, and progress visualization with a seamless user experience.",
-      imagePlaceholder: "/api/placeholder/800/600",
+      imagePlaceholder: "/images/placeholde.png",
       imageAlt: "Fitness app interface showing workout routines and statistics",
       tags: ["Kotlin", "Jetpack Compose", "Navigation", "Android"],
       githubLink: "https://github.com/yourusername/fitness-app",
       liveLink: null, // No live link as it's in development
       featured: false,
+      width: 800, // Required width property
+      height: 600, // Required height property
       category: "mobile",
       icon: <Dumbbell size={20} className="text-purple-400" />,
       bgColor: "purple-900/30",
@@ -57,12 +64,14 @@ export default function Projects() {
     {
       title: "Nottx",
       description: "An elegant note-taking application designed for efficient organization. Built with Jetpack Compose and Room database for seamless offline functionality.",
-      imagePlaceholder: "/api/placeholder/800/600",
+      imagePlaceholder: "/images/placeholde.png",
       imageAlt: "Nottx app showing notes organization and editing interface",
       tags: ["Kotlin", "Jetpack Compose", "Room DB", "MVVM"],
       githubLink: "https://github.com/yourusername/nottx",
       liveLink: "https://play.google.com/store/apps/details?id=com.yourusername.nottx",
       featured: false,
+      width: 800, // Required width property
+      height: 600, // Required height property
       category: "mobile",
       icon: <FilePenLine size={20} className="text-yellow-400" />,
       bgColor: "yellow-900/30",
@@ -71,12 +80,14 @@ export default function Projects() {
     {
       title: "Notepad",
       description: "A versatile text editor built with Java Swing. Supports multiple file formats, syntax highlighting, and customizable interface themes.",
-      imagePlaceholder: "/api/placeholder/800/600",
+      imagePlaceholder: "/images/placeholde.png",
       imageAlt: "Notepad application showing text editing with syntax highlighting",
       tags: ["Java", "Swing", "File I/O", "Desktop App"],
       githubLink: "https://github.com/yourusername/notepad",
       liveLink: "https://github.com/yourusername/notepad/releases",
       featured: false,
+      width: 800, // Required width property
+      height: 600, // Required height property
       category: "desktop",
       icon: <Code size={20} className="text-orange-400" />,
       bgColor: "orange-900/30",
@@ -143,9 +154,11 @@ export default function Projects() {
               
               {/* Project image with placeholder */}
               <div className="relative w-full h-56 overflow-hidden">
-                <img 
+                <Image 
                   src={project.imagePlaceholder} 
                   alt={project.imageAlt}
+                  width={800}
+                  height={600}
                   className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-black/20 group-hover:opacity-80 transition-opacity duration-300" />
@@ -240,8 +253,10 @@ export default function Projects() {
               
               {/* Project image with placeholder */}
               <div className="relative w-full h-44 overflow-hidden">
-                <img 
+                <Image
                   src={project.imagePlaceholder} 
+                  width={800}
+                  height={600}
                   alt={project.imageAlt}
                   className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />

@@ -78,7 +78,7 @@ export default function Skills() {
 
   const progressVariants = {
     hidden: { width: 0 },
-    visible: (level: any) => ({
+    visible: (level: unknown) => ({
       width: `${level}%`,
       transition: { duration: 0.8, ease: "easeOut" }
     })
