@@ -2,7 +2,7 @@
 
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import { Code, SmartphoneNfc, Layers, Database, Globe, Server, FileCode, TerminalSquare } from "lucide-react";
+import { SmartphoneNfc, Database, Server, FileCode, TerminalSquare } from "lucide-react";
 
 export default function Skills() {
   const ref = useRef(null);

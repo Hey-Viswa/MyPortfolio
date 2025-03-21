@@ -2,7 +2,7 @@
 
 import { useRef, useState, useEffect } from "react";
 import { motion, useInView, AnimatePresence } from "framer-motion";
-import { Send, Mail, Phone, MapPin, Linkedin, Github, Twitter, CheckCircle, Calendar, ArrowRight } from "lucide-react";
+import { Send, Mail, Phone, MapPin, Linkedin, Github, Twitter, CheckCircle, ArrowRight } from "lucide-react";
 
 export default function ContactMe() {
     const ref = useRef(null);
@@ -69,8 +69,8 @@ export default function ContactMe() {
     }, [isInView]);
 
     // Form input handler
-    const handleInputChange = (e: { target: { name: any; value: any; }; }) => {
-        const { name, value } = e.target;
+    const handleInputChange = (e: { target: { name: unknown; value: unknown; }; }) => {
+        const { name, value } = e.target as { name: string; value: string };
         setFormData(prev => ({ ...prev, [name]: value }));
     };
 

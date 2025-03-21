@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { Home, Folder, User, Mail, Instagram, Twitter, MessageSquare } from "lucide-react";
+import { Home, Folder, User, Mail, Instagram, Twitter } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import TheOptivusLogo from "@/components/Logo";
 

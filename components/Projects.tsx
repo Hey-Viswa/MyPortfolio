@@ -2,8 +2,8 @@
 
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import { Github, ExternalLink, Code, Smartphone, Layout, FilePenLine, ShoppingCart, Dumbbell } from "lucide-react";
-import Image from "next/image";
+import { Github, ExternalLink, Code, Smartphone, FilePenLine, ShoppingCart, Dumbbell } from "lucide-react";
+
 
 export default function Projects() {
   const ref = useRef(null);
@@ -328,7 +328,7 @@ export default function Projects() {
 }
 
 // You need to add this missing component from your original code
-function Star({ size, className }) {
+function Star({ size, className }: { size: number; className?: string }) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
