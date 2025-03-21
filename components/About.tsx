@@ -4,7 +4,7 @@ import { useRef, useState } from "react";
 import { motion, useInView, AnimatePresence } from "framer-motion";
 import { User, Award, Briefcase, Sparkles, Globe, Code, Mail } from "lucide-react";
 import Image from "next/image";
-import { url } from "inspector";
+
 
 export default function AboutMe() {
     const ref = useRef(null);
